@@ -2,13 +2,14 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import CatsIndex from './components/cats/CatsIndex'
-import CatShow from './components/cats/CatShow'
-import Home from './components/common/home'
+import Home from './components/common/Home'
+import Navbar from './components/common/Navbar'
 
 
 function App() {
   return (
     <BrowserRouter>
+    <Navbar />
       <Switch>
       <Route exact path = "/"> 
         <Home />
@@ -16,10 +17,7 @@ function App() {
       <Route path = "/cats">
         <CatsIndex/>
       </Route> 
-      <Route path = "/cats/:catId"> 
-        <CatShow />
-      </Route> 
-      </Switch>
+    </Switch>
     </BrowserRouter>
   )
 }

@@ -13,7 +13,3 @@ function headers() {
 export function getAllCats() {
   return axios.get(`${baseUrl}`, headers())
 }
-
-export function getSingleCat(catId) {
-  return axios.get(`${baseUrl}/cats/${catId}`, headers())
-}

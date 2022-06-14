@@ -29,8 +29,10 @@ function CatsIndex() {
   }, [])
 
   return (
-    <section>
-      <div>
+    <section className="section">
+    <div className="index-container">
+    <div className="container">
+      <div className="columns is-multiline">
       {cats &&
         cats.map(cat => (
           <CatCard 
@@ -43,6 +45,9 @@ function CatsIndex() {
           />
       ))}
       </div>
+      </div>
+    </div>
+    
     </section>
   )
 }
